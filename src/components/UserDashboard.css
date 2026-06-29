@@ -1,0 +1,286 @@
+.dashboard {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+.dashboard-header,
+.toolbar,
+.pagination,
+.filter-panel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.dashboard-header {
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: #55708f;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: 34px;
+}
+
+.toolbar {
+  margin-bottom: 16px;
+}
+
+.toolbar input,
+.filter-panel input,
+.user-form input,
+.pagination select {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 11px 12px;
+  background: #fff;
+}
+
+.toolbar input {
+  flex: 1;
+}
+
+.filter-panel {
+  align-items: end;
+  margin-bottom: 16px;
+  padding: 16px;
+  border: 1px solid #dbe4ef;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.filter-panel label,
+.user-form label {
+  display: grid;
+  gap: 7px;
+  flex: 1;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.table-shell {
+  overflow-x: auto;
+  border: 1px solid #dbe4ef;
+  border-radius: 8px;
+  background: #fff;
+}
+
+table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 14px;
+  border-bottom: 1px solid #e6edf5;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  background: #edf3f8;
+  color: #26384d;
+  font-size: 13px;
+}
+
+th button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.row-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.primary-button,
+.secondary-button,
+.danger-button,
+.icon-button {
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.primary-button {
+  background: #1266d6;
+  color: #fff;
+  padding: 11px 16px;
+}
+
+.secondary-button {
+  background: #e8eef6;
+  color: #25364a;
+  padding: 10px 14px;
+}
+
+.danger-button {
+  background: #d92d20;
+  color: #fff;
+  padding: 10px 14px;
+}
+
+.icon-button {
+  width: 36px;
+  height: 36px;
+  background: #edf2f7;
+  font-size: 22px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.alert {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-weight: 700;
+}
+
+.alert.error {
+  background: #fdecec;
+  color: #9b1c1c;
+}
+
+.alert.success {
+  background: #eaf8ef;
+  color: #17643a;
+}
+
+.empty-state {
+  padding: 28px;
+  text-align: center;
+  color: #667085;
+}
+
+.pagination {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.pagination label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pagination select {
+  width: auto;
+}
+
+.page-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.58);
+  z-index: 10;
+}
+
+.modal {
+  width: min(640px, 100%);
+  max-height: 90vh;
+  overflow: auto;
+  border-radius: 8px;
+  background: #fff;
+  padding: 24px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.22);
+}
+
+.modal.small {
+  max-width: 420px;
+}
+
+.modal-header,
+.modal-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.user-form {
+  display: grid;
+  gap: 14px;
+}
+
+.invalid {
+  border-color: #d92d20 !important;
+  background: #fff7f7 !important;
+}
+
+.field-error {
+  color: #b42318;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.modal-actions {
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+@media (max-width: 720px) {
+  .dashboard {
+    padding: 22px 14px;
+  }
+
+  .dashboard-header,
+  .toolbar,
+  .filter-panel,
+  .pagination {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .danger-button {
+    width: 100%;
+  }
+
+  .row-actions {
+    flex-direction: column;
+  }
+
+  .page-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
