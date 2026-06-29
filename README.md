@@ -31,7 +31,7 @@ npm start
 
 ## Open:
 
-http://localhost:3000
+https://userdashboard-9qfvfbxc4-gowthamkalluris-projects.vercel.app/
 
 ## API
 
